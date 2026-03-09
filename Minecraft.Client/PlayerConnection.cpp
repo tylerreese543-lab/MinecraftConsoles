@@ -1595,10 +1595,6 @@ void PlayerConnection::handleCraftItem(shared_ptr<CraftItemPacket> packet)
 	Recipy::INGREDIENTS_REQUIRED *pRecipeIngredientsRequired=Recipes::getInstance()->getRecipeIngredientsArray();
 	shared_ptr<ItemInstance> pTempItemInst=pRecipeIngredientsRequired[iRecipe].pRecipy->assemble(nullptr);
 
-	size_t recipeCount = Recipes::getInstance()->getRecipies()->size();
-	if (iRecipe < 0 || iRecipe >= (int)recipeCount)
-		return;
-
 	if(app.DebugSettingsOn() && (player->GetDebugOptions()&(1L<<eDebugSetting_CraftAnything)))
 	{
 		pTempItemInst->onCraftedBy(player->level, dynamic_pointer_cast<Player>( player->shared_from_this() ), pTempItemInst->count );
