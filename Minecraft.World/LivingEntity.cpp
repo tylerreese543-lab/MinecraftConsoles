@@ -858,8 +858,13 @@ bool LivingEntity::hurt(DamageSource *source, float dmg)
 		die(source);
 	}
 	else
-	{
-		if (sound) playSound(getHurtSound(), getSoundVolume(), getVoicePitch());
+	{	
+		if (sound) {
+
+			//New Critical Sound plays and works for the most part
+			if (source->isCritical()) playSound(getCritHurtSound(), getSoundVolume(), getVoicePitch());
+			playSound(getHurtSound(), getSoundVolume(), getVoicePitch());
+		}
 	}
 	MemSect(0);
 
@@ -958,6 +963,13 @@ void LivingEntity::knockback(shared_ptr<Entity> source, float dmg, double xd, do
 int LivingEntity::getHurtSound()
 {
 	return eSoundType_DAMAGE_HURT;
+}
+
+
+
+int LivingEntity::getCritHurtSound()
+{
+	return eSoundType_DAMAGE_CRITICAL;
 }
 
 int LivingEntity::getDeathSound()

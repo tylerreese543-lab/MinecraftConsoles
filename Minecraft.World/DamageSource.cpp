@@ -78,6 +78,16 @@ bool DamageSource::isProjectile()
 {
 	return _isProjectile;
 }
+//whoa new stuff!
+bool DamageSource::isCritical()
+{
+	return _isCritical;
+}
+DamageSource *DamageSource::setCritical()
+{
+	_isCritical = true;
+	return this;
+}
 
 DamageSource *DamageSource::setProjectile()
 {

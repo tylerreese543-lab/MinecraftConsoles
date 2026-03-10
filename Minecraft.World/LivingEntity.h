@@ -187,6 +187,7 @@ public:
 protected:
 	virtual int getHurtSound();
 	virtual int getDeathSound();
+	virtual int getCritHurtSound();
 
 protected:
 	virtual void dropRareDeathLoot(int rareLootLevel);

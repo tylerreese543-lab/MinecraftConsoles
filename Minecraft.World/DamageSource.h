@@ -47,8 +47,11 @@ private:
 	bool _scalesWithDifficulty;
 	bool _isMagic;
 	bool _isExplosion;
+	bool _isCritical;
 
 public:
+	bool isCritical();
+	DamageSource* setCritical();
 	bool isProjectile();
 	DamageSource *setProjectile();
 	bool isExplosion();
