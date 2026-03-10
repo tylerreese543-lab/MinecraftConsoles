@@ -134,6 +134,7 @@ DamageSource::DamageSource(ChatPacket::EChatPacketMessage msgId, ChatPacket::ECh
 	_isProjectile = false;
 	_isMagic = false;
 	_isExplosion = false;
+	_isCritical = false;
 
 	//this->msgId = msgId;
 	m_msgId = msgId;
