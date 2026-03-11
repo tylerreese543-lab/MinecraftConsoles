@@ -120,7 +120,6 @@ LocalPlayer::LocalPlayer(Minecraft *minecraft, Level *level, User *user, int dim
 	lastClickTolerance = 0.0f;
 
 	m_bHasAwardedStayinFrosty = false;
-
 }
 
 LocalPlayer::~LocalPlayer()

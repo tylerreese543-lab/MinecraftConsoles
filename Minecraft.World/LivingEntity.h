@@ -80,9 +80,6 @@ public:
 	float yHeadRot, yHeadRotO;
 	float flyingSpeed;
 
-	//New
-	int nametagColor;
-	bool SettingThis = false;
 protected:
 	shared_ptr<Player> lastHurtByPlayer;
 	int lastHurtByPlayerTime;
