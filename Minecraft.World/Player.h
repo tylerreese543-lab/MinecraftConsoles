@@ -72,7 +72,6 @@ protected:
 	int jumpTriggerTime;
 
 public:
-
 	BYTE userType;
 	float oBob, bob;
 

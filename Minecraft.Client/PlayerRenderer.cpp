@@ -65,7 +65,8 @@ PlayerRenderer::PlayerRenderer() : LivingEntityRenderer( new HumanoidModel(0), 0
 
 unsigned int PlayerRenderer::getNametagColour(int index)
 {
-	if( index >= 0 && index < MINECRAFT_NET_MAX_PLAYERS) return nametagColorForIndex(index);
+	if( index >= 0 && index < MINECRAFT_NET_MAX_PLAYERS)
+		return nametagColorForIndex(index);
 	return 0xFF000000;
 }
 
@@ -495,23 +496,6 @@ void PlayerRenderer::renderNameTags(shared_ptr<LivingEntity> player, double x, d
     }
 #endif
 
-	//Check if the player is a local or server player, and if so, add the gamertag prefix to the nametag
-	//For some reason this is a LivingEntity instead of a Player, but this is derived from LivingEntityRenderer so it makes sense
-	//Anyways just recast
-
-	if (player->instanceof(eTYPE_PLAYER)) {
-		shared_ptr<Player> plr = static_pointer_cast<Player>(player);
-		//This doesn't work for some reason
-		player->nametagColor = 0xFF0000FF;
-
-		//But this does??? nametagColor is still black in the renderNameTag method, but it is set to the correct color here, so maybe the renderNameTag method is using a different player instance or something?
-
-
-		player->SettingThis = true; //This is how I know
-	}
-
-	//Set it literally right before, mind you both player and mob are LivingEntity
-	player->nametagColor = 0xFF0000FF; //This doesn't do anything and is still black.
     LivingEntityRenderer::renderNameTags(player, x, y, z, msg, scale, dist);
 }
 
