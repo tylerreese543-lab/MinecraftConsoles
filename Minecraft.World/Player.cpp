@@ -42,7 +42,7 @@
 #include "..\Minecraft.Client\LocalPlayer.h"
 #include "..\Minecraft.Client\HumanoidModel.h"
 #include "SoundTypes.h"
-
+#include "..\Minecraft.Client\Common\Colours\ColourTable.h"
 
 
 void Player::_init()
