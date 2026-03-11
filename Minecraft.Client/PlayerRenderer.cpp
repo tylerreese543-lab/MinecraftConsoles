@@ -199,11 +199,11 @@ void PlayerRenderer::render(shared_ptr<Entity> _mob, double x, double y, double 
     armorParts1->sneaking = armorParts2->sneaking = humanoidModel->sneaking = mob->isSneaking();
 
     double yp = y - mob->heightOffset;
-    if (mob->isSneaking() && !mob->instanceof(eTYPE_LOCALPLAYER))
+    if (mob->isSneaking())
 	{
-        yp -= 2 / 16.0f;
+		yp -= 2 / 16.0f; //Added more
     }
-
+	
 	// Check if an idle animation is needed
 	if(mob->getAnimOverrideBitmask()&(1<<HumanoidModel::eAnim_HasIdle))
 	{
