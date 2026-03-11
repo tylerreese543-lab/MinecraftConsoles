@@ -833,7 +833,12 @@ bool LivingEntity::hurt(DamageSource *source, float dmg)
 
 	if (sound)
 	{
-		level->broadcastEntityEvent(shared_from_this(), EntityEvent::HURT);
+		if (source->isCritical()) {
+			level->broadcastEntityEvent(shared_from_this(), EntityEvent::HURT_CRITICAL);
+		}
+		else {
+			level->broadcastEntityEvent(shared_from_this(), EntityEvent::HURT);
+		}
 		if (source != DamageSource::drown) markHurt();
 		if (sourceEntity != nullptr)
 		{
@@ -861,7 +866,10 @@ bool LivingEntity::hurt(DamageSource *source, float dmg)
 	}
 	else
 	{
-		if (sound) playSound(getHurtSound(), getSoundVolume(), getVoicePitch());
+		if (sound) { 
+			if (source->isCritical()) playSound(getCriticalSound(), getSoundVolume(), getVoicePitch());
+			playSound(getHurtSound(), getSoundVolume(), getVoicePitch());
+		}
 	}
 	MemSect(0);
 
@@ -961,7 +969,10 @@ int LivingEntity::getHurtSound()
 {
 	return eSoundType_DAMAGE_HURT;
 }
-
+int LivingEntity::getCriticalSound()
+{
+	return eSoundType_DAMAGE_CRITICAL;
+}
 int LivingEntity::getDeathSound()
 {
 	return eSoundType_DAMAGE_HURT;
@@ -1183,7 +1194,8 @@ void LivingEntity::swing()
 
 void LivingEntity::handleEntityEvent(byte id)
 {
-	if (id == EntityEvent::HURT)
+	//These gotta be in parentheses
+	if ((id == EntityEvent::HURT) || (id == EntityEvent::HURT_CRITICAL))
 	{
 		walkAnimSpeed = 1.5f;
 
@@ -1193,10 +1205,15 @@ void LivingEntity::handleEntityEvent(byte id)
 
 		MemSect(31);
 		// 4J-PB -added because villagers have no sounds
-		int iHurtSound=getHurtSound();
+		int iHurtSound = getHurtSound();
+		int iCritSound = getCriticalSound();
 		if(iHurtSound!=-1)
 		{
 			playSound(iHurtSound, getSoundVolume(), (random->nextFloat() - random->nextFloat()) * 0.2f + 1.0f);
+		}
+		if(iCritSound!=-1 && id == EntityEvent::HURT_CRITICAL)
+		{
+			playSound(iCritSound, getSoundVolume(), (random->nextFloat() - random->nextFloat()) * 0.2f + 1.0f);
 		}
 		MemSect(0);
 		hurt(DamageSource::genericSource, 0);
