@@ -465,11 +465,13 @@ void LivingEntityRenderer::renderNameTags(shared_ptr<LivingEntity> mob, double x
 {
 	if (mob->isSleeping())
 	{
-		renderNameTag(mob, msg, x, y - 1.5f, z, 64);
+		renderNameTag(mob, msg, x, y - 1.5f, z, 64, mob->nametagColor); //This fills the "color" argument
 	}
 	else
 	{
-		renderNameTag(mob, msg, x, y, z, 64);
+		//but THIS. THIS works. ???
+		mob->nametagColor = 0xFFFF0000;
+		renderNameTag(mob, msg, x, y, z, 64, mob->nametagColor);
 	}
 }
 
@@ -548,7 +550,6 @@ void LivingEntityRenderer::renderNameTag(shared_ptr<LivingEntity> mob, const wst
 		shared_ptr<Player> player = dynamic_pointer_cast<Player>(mob);
 
 		if(app.isXuidDeadmau5( player->getXuid() ) ) offs = -10;
-
 #if defined(__PS3__) || defined(__ORBIS__)
 		// Check we have all the font characters for this player name
 		switch(player->GetPlayerNameValidState())
@@ -649,14 +650,16 @@ void LivingEntityRenderer::renderNameTag(shared_ptr<LivingEntity> mob, const wst
 		t->end();		
 		glDepthFunc(GL_LEQUAL);
 		glEnable(GL_TEXTURE_2D);
-
 		glTranslatef(0.0f, 0.0f, -0.04f);
 	}
 
 	if( textOpacity > 0.0f )
 	{
+		//This works as intended
 		int textColor = ( ( static_cast<int>(textOpacity * 255) << 24 ) | 0xffffff );
-		font->draw(playerName, -font->width(playerName) / 2, offs, textColor);
+		font->draw(L"PLR " + mob->SettingThis ? L"YES" : L"NO", -font->width(playerName) / 2, offs, textColor);
+
+
 	}
 
 	glEnable(GL_LIGHTING);

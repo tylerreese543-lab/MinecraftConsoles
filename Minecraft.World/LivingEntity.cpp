@@ -93,6 +93,8 @@ void LivingEntity::_init()
 	speed = 0.0f;
 	noJumpDelay = 0;
 	absorptionAmount = 0.0f;
+
+	nametagColor = 0xff000000; //default black
 }
 
 LivingEntity::LivingEntity( Level* level) : Entity(level)
@@ -114,6 +116,7 @@ LivingEntity::LivingEntity( Level* level) : Entity(level)
 	yHeadRot = yRot;
 
 	footSize = 0.5f;
+
 }
 
 LivingEntity::~LivingEntity()

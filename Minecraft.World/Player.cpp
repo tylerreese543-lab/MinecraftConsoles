@@ -41,6 +41,7 @@
 
 #include "..\Minecraft.Client\LocalPlayer.h"
 #include "..\Minecraft.Client\HumanoidModel.h"
+#include "..\Minecraft.Client\Common\Colours\ColourTable.h"
 #include "SoundTypes.h"
 
 
@@ -101,6 +102,7 @@ void Player::_init()
 	m_bCheckedForModelParts=false;
 	m_bCheckedDLCForModelParts=false;
 
+		
 #if defined(__PS3__) || defined(__ORBIS__)
 	m_ePlayerNameValidState=ePlayerNameValid_NotSet;
 #endif
@@ -108,6 +110,8 @@ void Player::_init()
 	enderChestInventory = std::make_shared<PlayerEnderChestContainer>();
 
 	m_bAwardedOnARail=false;
+
+
 }
 
 Player::Player(Level *level, const wstring &name) : LivingEntity( level )
@@ -145,13 +149,18 @@ Player::Player(Level *level, const wstring &name) : LivingEntity( level )
 	setShowOnMaps(app.GetGameHostOption(eGameHostOption_Gamertags)!=0?true:false);
 	m_bIsGuest = false;
 
+
+
 #ifndef _XBOX_ONE
 	// 4J: Set UUID to name on none-XB1 consoles, may change in future but for now
 	// ownership of animals on these consoles is done by name
 	setUUID(name);
 #endif
-}
 
+
+
+
+}
 Player::~Player()
 {
 	// TODO 4J
