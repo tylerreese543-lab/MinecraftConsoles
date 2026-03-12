@@ -1001,9 +1001,23 @@ void Player::aiStep()
 {
 	if (jumpTriggerTime > 0) jumpTriggerTime--;
 
-	if (level->difficulty == Difficulty::PEACEFUL && getHealth() < getMaxHealth() && level->getGameRules()->getBoolean(GameRules::RULE_NATURAL_REGENERATION))
-	{
-		if (tickCount % 20 * 12 == 0) heal(1);
+	if (level->getGameRules()->getBoolean(GameRules::RULE_NATURAL_REGENERATION)) {
+		bool health_OK = getHealth() < getMaxHealth();
+		if ((tickCount % 12 == 0) && health_OK) {
+
+
+
+			FoodData* fd = getFoodData();
+			if ((level->difficulty == Difficulty::PEACEFUL)) {
+				heal(1);
+			}
+			//Quick-Regen from saturation (must have 8 1/2 hunger and have at least 3 saturation)
+			else if (fd->getSaturationLevel() > 3 && fd->getFoodLevel() >= 17) {
+				heal(1);
+				fd->setSaturation(fd->getSaturationLevel() - 3);
+			}
+
+		};
 	}
 	inventory->tick();
 	oBob = bob;
