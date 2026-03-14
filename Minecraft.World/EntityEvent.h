@@ -7,6 +7,7 @@ public:
 	static const BYTE HURT = 2;
 	//New
 	static const BYTE HURT_CRITICAL = 19;
+	static const BYTE DEATH_CRITICAL = 20;
 	static const BYTE DEATH = 3;
 	static const BYTE START_ATTACKING = 4;
 	static const BYTE STOP_ATTACKING = 5;
