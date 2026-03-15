@@ -898,8 +898,10 @@ void LivingEntity::breakItem(shared_ptr<ItemInstance> itemInstance)
 	}
 }
 
+//Hey this is a random comment to get the commit working because it didn't recognize the files i changed (L)
 void LivingEntity::die(DamageSource *source)
 {
+	
 	shared_ptr<Entity> sourceEntity = source->getEntity();
 	shared_ptr<LivingEntity> killer = getKillCredit();
 	if (deathScore >= 0 && killer != nullptr) killer->awardKillScore(shared_from_this(), deathScore);
