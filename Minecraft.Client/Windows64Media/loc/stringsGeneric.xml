@@ -1081,8 +1081,16 @@ The colors of the bed are always the same, regardless of the colors of wool used
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>Restores 4{*ICON_SHANK_01*}. Created by cooking raw beef in a furnace.</value>
-	</data>	
+	</data>
 
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>Restores 3{*ICON_SHANK_01*}. Created by cooking raw mutton in a furnace.</value>
+	</data>
+
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>Restores 1{*ICON_SHANK_01*}, or can be cooked in a furnace.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>Restores 1.5{*ICON_SHANK_01*}, or can be cooked in a furnace.</value>
 	</data>	
@@ -2764,11 +2772,17 @@ Can also be used for low-level lighting.</value>
 	<data name="IDS_ITEM_BEEF_RAW">
 		<value>Raw Beef</value>
 	</data>	
-
+	
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>Steak</value>
-	</data>	
+	</data>
 
+	<data name="IDS_ITEM_MUTTON_RAW">
+		<value>Raw Mutton</value>
+	</data>
+	<data name="IDS_ITEM_MUTTON_COOKED">
+		<value>Cooked Mutton</value>
+	</data>
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>Rotten Flesh</value>
 	</data>	

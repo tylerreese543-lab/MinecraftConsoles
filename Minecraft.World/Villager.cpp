@@ -427,6 +427,7 @@ void Villager::addOffers(int addCount)
 		addItemForTradeIn(newOffers, Item::coal_Id, random, getRecipeChance(.7f));
 		addItemForTradeIn(newOffers, Item::porkChop_raw_Id, random, getRecipeChance(.5f));
 		addItemForTradeIn(newOffers, Item::beef_raw_Id, random, getRecipeChance(.5f));
+		addItemForTradeIn(newOffers, Item::mutton_raw_Id, random, getRecipeChance(.5f));
 		addItemForPurchase(newOffers, Item::saddle_Id, random, getRecipeChance(.1f));
 		addItemForPurchase(newOffers, Item::chestplate_leather_Id, random, getRecipeChance(.3f));
 		addItemForPurchase(newOffers, Item::boots_leather_Id, random, getRecipeChance(.3f));
@@ -434,6 +435,7 @@ void Villager::addOffers(int addCount)
 		addItemForPurchase(newOffers, Item::leggings_leather_Id, random, getRecipeChance(.3f));
 		addItemForPurchase(newOffers, Item::porkChop_cooked_Id, random, getRecipeChance(.3f));
 		addItemForPurchase(newOffers, Item::beef_cooked_Id, random, getRecipeChance(.3f));
+		addItemForPurchase(newOffers, Item::mutton_cooked_Id, random, getRecipeChance(.3f));
 		break;
 	case PROFESSION_SMITH:
 		addItemForTradeIn(newOffers, Item::coal_Id, random, getRecipeChance(.7f));
@@ -549,6 +551,7 @@ void Villager::staticCtor()
 	MIN_MAX_VALUES[Item::porkChop_raw_Id] = pair<int,int>(14, 18);
 	MIN_MAX_VALUES[Item::beef_raw_Id] = pair<int,int>(14, 18);
 	MIN_MAX_VALUES[Item::chicken_raw_Id] = pair<int,int>(14, 18);
+	MIN_MAX_VALUES[Item::mutton_raw_Id] = pair<int,int>(14, 18);
 	MIN_MAX_VALUES[Item::fish_cooked_Id] = pair<int,int>(9, 13);
 	MIN_MAX_VALUES[Item::seeds_wheat_Id] = pair<int,int>(34, 48);
 	MIN_MAX_VALUES[Item::seeds_melon_Id] = pair<int,int>(30, 38);
@@ -599,6 +602,8 @@ void Villager::staticCtor()
 	MIN_MAX_PRICES[Tile::glowstone_Id] = pair<int,int>(-3, -1);
 	MIN_MAX_PRICES[Item::porkChop_cooked_Id] = pair<int,int>(-7, -5);
 	MIN_MAX_PRICES[Item::beef_cooked_Id] = pair<int,int>(-7, -5);
+	//Mutton is kind of an in-between of pork and beef, so it's a little cheaper than both
+	MIN_MAX_PRICES[Item::mutton_cooked_Id] = pair<int,int>(-8, -5);
 	MIN_MAX_PRICES[Item::chicken_cooked_Id] = pair<int,int>(-8, -6);
 	MIN_MAX_PRICES[Item::eyeOfEnder_Id] = pair<int,int>(7, 11);
 	MIN_MAX_PRICES[Item::arrow_Id] = pair<int,int>(-12, -8);

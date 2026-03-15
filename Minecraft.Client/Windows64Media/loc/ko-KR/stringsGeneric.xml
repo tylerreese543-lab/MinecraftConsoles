@@ -880,8 +880,16 @@ Ender에 들어서면 친구가 그들의 지도에서 요새 내부에 있는 E
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>{*ICON_SHANK_01*}를 4만큼 회복합니다.</value>
-	</data>	
+	</data>
 
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>{*ICON_SHANK_01*}를 3만큼 회복합니다. 생의 양고기를 화로에서 조리하여 만듭니다.</value>
+	</data>
+
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>{*ICON_SHANK_01*}를 1만큼 회복하지만 병에 걸릴 수 있습니다. 화로에서 조리가 가능합니다.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>돼지를 잡으면 얻을 수 있으며 {*ICON_SHANK_01*}를 1.5만큼 회복합니다. 화로에서 조리가 가능합니다.</value>
 	</data>	
@@ -2446,8 +2454,16 @@ Ender에 들어서면 친구가 그들의 지도에서 요새 내부에 있는 E
 
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>스테이크</value>
-	</data>	
+	</data>
 
+	<data name="IDS_ITEM_BEEF_RAW">
+		<value>소 날고기</value>
+	</data>
+
+	<data name="IDS_ITEM_BEEF_COOKED">
+		<value>스테이크</value>
+	</data>
+	
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>썩은 살점</value>
 	</data>	

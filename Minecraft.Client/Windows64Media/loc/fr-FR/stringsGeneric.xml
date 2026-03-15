@@ -883,8 +883,16 @@ La couleur des lits est toujours la même.</value>
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>Restitue 4{*ICON_SHANK_01*}.</value>
-	</data>	
+	</data>
+	
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>Restitue 3{*ICON_SHANK_01*} mais peut vous rendre malade. Se cuisine dans un four.</value>
+	</data>
 
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>Restitue 1{*ICON_SHANK_01*} mais peut vous rendre malade. Se cuisine dans un four.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>Prélevée sur les cadavres de cochons, restitue 1,5{*ICON_SHANK_01*} et se cuisine dans un four.</value>
 	</data>	
@@ -2450,8 +2458,19 @@ Remarque : vous pouvez aussi combiner colorant gris et poudre d'os pour en produ
 
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>Steak</value>
-	</data>	
+	</data>
 
+	<data name="IDS_ITEM_MUTTON_RAW">
+		<value>
+			Mouton cru
+		</value>
+	</data>
+	<data name="IDS_ITEM_MUTTON_COOKED">
+		<value>
+			mouton cuit
+		</value>
+	</data>
+	
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>Chair putréfiée</value>
 	</data>	

@@ -880,8 +880,16 @@ Los colores de la cama siempre son los mismos, independientemente del color de l
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>Restablece 4{*ICON_SHANK_01*}.</value>
-	</data>	
+	</data>
 
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>Restablece 3{*ICON_SHANK_01*}.</value>
+	</data>
+
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>Restablece 1{*ICON_SHANK_01*}, pero puede hacerte enfermar. Cocinar en un horno.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>Se consigue al matar un cerdo, restablece 1,5{*ICON_SHANK_01*} y se puede cocinar en un horno.</value>
 	</data>	
@@ -2459,8 +2467,19 @@ de tinta en vez de 3).</value>
 
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>Filete</value>
-	</data>	
+	</data>
 
+	<data name="IDS_ITEM_MUTTON_RAW">
+		<value>
+			Cordero crudo
+		</value>
+	</data>
+	<data name="IDS_ITEM_MUTTON_COOKED">
+		<value>
+			Cordero cocido
+		</value>
+	</data>
+	
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>Carne podrida</value>
 	</data>	

@@ -874,8 +874,16 @@ As cores da cama são sempre as mesmas, independentemente da cor da lã usada.</
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>Restaura 4{*ICON_SHANK_01*}.</value>
-	</data>	
+	</data>
 
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>Restaura 3{*ICON_SHANK_01*}. Criada ao cozinhar carne de cordeiro crua na fornalha.</value>
+	</data>
+
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>Restaura 1{*ICON_SHANK_01*}, ou pode ser cozida na fornalha.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>Coletada ao matar um porco, restaura 1.5{*ICON_SHANK_01*}, e pode ser cozida na fornalha.</value>
 	</data>	
@@ -2440,7 +2448,14 @@ Também pode ser usado para pouca iluminação.</value>
 
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>Bife</value>
-	</data>	
+	</data>
+
+	<data name="IDS_ITEM_MUTTON_RAW">
+		<value>Carne de Cordeiro Crua</value>
+	</data>
+	<data name="IDS_ITEM_MUTTON_COOKED">
+		<value>Carne de Cordeiro Cozida</value>
+	</data>
 
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>Carne Podre</value>

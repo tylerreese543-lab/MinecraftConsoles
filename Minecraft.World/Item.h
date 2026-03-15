@@ -328,6 +328,8 @@ public:
 	static Item *beef_cooked;
 	static Item *chicken_raw;
 	static Item *chicken_cooked;
+	static Item *mutton_raw;
+	static Item *mutton_cooked;
 	static Item *rotten_flesh;
 
 	static Item *enderPearl;
@@ -617,6 +619,11 @@ public:
 	static const int horseArmorDiamond_Id = 419;
 	static const int lead_Id = 420;
 	static const int nameTag_Id = 421;
+
+	//Custom IDs here
+
+	static const int mutton_raw_Id = 422;
+	static const int mutton_cooked_Id = 423;
 
 public:
 	const int id;
