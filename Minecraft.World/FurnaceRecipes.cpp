@@ -24,6 +24,7 @@ FurnaceRecipes::FurnaceRecipes()
 	addFurnaceRecipy(Item::porkChop_raw_Id, new ItemInstance(Item::porkChop_cooked), .35f);
 	addFurnaceRecipy(Item::beef_raw_Id, new ItemInstance(Item::beef_cooked), .35f);
 	addFurnaceRecipy(Item::chicken_raw_Id, new ItemInstance(Item::chicken_cooked), .35f);
+	addFurnaceRecipy(Item::mutton_raw_Id, new ItemInstance(Item::mutton_cooked), .35f);
 	addFurnaceRecipy(Item::fish_raw_Id, new ItemInstance(Item::fish_cooked), .35f);
 	addFurnaceRecipy(Tile::cobblestone_Id, new ItemInstance(Tile::stone), .1f);
 	addFurnaceRecipy(Item::clay_Id, new ItemInstance(Item::brick), .3f);

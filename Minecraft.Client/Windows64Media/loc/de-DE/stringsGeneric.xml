@@ -886,8 +886,16 @@ haben.</value>
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>Regeneriert 4{*ICON_SHANK_01*}.</value>
-	</data>	
+	</data>
 
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>Regeneriert 3{*ICON_SHANK_01*}.</value>
+	</data>
+
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>Regeneriert 1{*ICON_SHANK_01*}, kann dich aber krankmachen. Kann im Ofen gebraten werden.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>Erhält man durch Töten eines Schweins, regeneriert 1.5{*ICON_SHANK_01*}. Kann im Ofen gebraten werden.</value>
 	</data>	
@@ -2455,8 +2463,16 @@ statt nur 3.)</value>
 
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>Steak</value>
-	</data>	
-
+	</data>
+	
+	<data name="IDS_ITEM_MUTTON_RAW">
+		<value>Rohes Lammfleisch</value>
+	</data>
+	
+	<data name="IDS_ITEM_MUTTON_COOKED">
+		<value>Gebratenes Lammfleisch</value>
+	</data>
+	
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>Verrottetes Fleisch</value>
 	</data>	

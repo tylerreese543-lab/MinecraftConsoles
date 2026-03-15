@@ -251,6 +251,9 @@ Item *Item::horseArmorDiamond = nullptr;
 Item *Item::lead = nullptr;
 Item *Item::nameTag = nullptr;
 
+//Custom Items here
+Item* Item::mutton_raw = nullptr;
+Item* Item::mutton_cooked = nullptr;
 
 void Item::staticCtor()
 {
@@ -493,7 +496,11 @@ void Item::staticCtor()
 	Item::horseArmorGold = (new Item(162))															->setIconName(L"gold_horse_armor")->setMaxStackSize(1)->setDescriptionId(IDS_ITEM_GOLD_HORSE_ARMOR)->setUseDescriptionId(IDS_DESC_GOLD_HORSE_ARMOR);
 	Item::horseArmorDiamond = (new Item(163))														->setIconName(L"diamond_horse_armor")->setMaxStackSize(1)->setDescriptionId(IDS_ITEM_DIAMOND_HORSE_ARMOR)->setUseDescriptionId(IDS_DESC_DIAMOND_HORSE_ARMOR);
 	Item::lead = (new LeashItem(164))																->setBaseItemTypeAndMaterial(eBaseItemType_pockettool,	eMaterial_undefined)->setIconName(L"lead")->setDescriptionId(IDS_ITEM_LEAD)->setUseDescriptionId(IDS_DESC_LEAD);
-	Item::nameTag = (new NameTagItem(165))															->setIconName(L"name_tag")->setDescriptionId(IDS_ITEM_NAME_TAG)->setUseDescriptionId(IDS_DESC_NAME_TAG);}
+	Item::nameTag = (new NameTagItem(165))															->setIconName(L"name_tag")->setDescriptionId(IDS_ITEM_NAME_TAG)->setUseDescriptionId(IDS_DESC_NAME_TAG);
+
+	Item::mutton_raw = (new FoodItem(166, 2, FoodConstants::FOOD_SATURATION_LOW, true))	->setIconName(L"muttonRaw")->setDescriptionId(IDS_ITEM_MUTTON_RAW)->setUseDescriptionId(IDS_DESC_MUTTON_RAW);
+	Item::mutton_cooked = (new FoodItem(167, 6, FoodConstants::FOOD_SATURATION_GOOD, true)) ->setIconName(L"muttonCooked")->setDescriptionId(IDS_ITEM_MUTTON_COOKED)->setUseDescriptionId(IDS_DESC_MUTTON_COOKED);
+}
 
 
 // 4J Stu - We need to do this after the staticCtor AND after staticCtors for other class

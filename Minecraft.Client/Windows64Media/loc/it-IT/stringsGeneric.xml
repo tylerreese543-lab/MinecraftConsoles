@@ -880,8 +880,16 @@ I colori sono sempre gli stessi, qualunque sia la lana usata.</value>
 
 	<data name="IDS_DESC_BEEF_COOKED">
 		<value>Reintegra 4{*ICON_SHANK_01*}.</value>
-	</data>	
+	</data>
 
+	<data name="IDS_DESC_MUTTON_COOKED">
+		<value>Reintegra 3{*ICON_SHANK_01*}</value>
+	</data>
+
+	<data name="IDS_DESC_MUTTON_RAW">
+		<value>Reintegra 1{*ICON_SHANK_01*}, ma può farti star male. Cucinare in una fornace.</value>
+	</data>
+	
 	<data name="IDS_DESC_PORKCHOP_RAW">
 		<value>Si ottiene uccidendo un maiale e si può cucinare nella fornace. Reintegra 1,5{*ICON_SHANK_01*}.</value>
 	</data>	
@@ -2446,8 +2454,13 @@ I colori sono sempre gli stessi, qualunque sia la lana usata.</value>
 
 	<data name="IDS_ITEM_BEEF_COOKED">
 		<value>Bistecca</value>
-	</data>	
-
+	</data>
+	<data name="IDS_ITEM_MUTTON_RAW">
+		<value>Montone crudo</value>
+	</data>
+	<data name="IDS_ITEM_MUTTON_COOKED">
+		<value>Montone cotto</value>
+	</data>
 	<data name="IDS_ITEM_ROTTEN_FLESH">
 		<value>Carne guasta</value>
 	</data>	
